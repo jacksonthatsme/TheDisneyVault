@@ -24,7 +24,7 @@ if (!('webkitSpeechRecognition' in window)) {
                  interim_transcript = event.results[i][0].transcript; 
 
                  // if the object isn't moving, allow commands to be sent down.
-                 if(!move){gameLoop(interim_transcript,'voice');}
+                 //if(!move){gameLoop(interim_transcript,'voice');}
               }
             
            
