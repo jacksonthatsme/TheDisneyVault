@@ -35,5 +35,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
    }
 recognition.onsoundstart = console.log('sound has started');
+recognition.onaudiostart = console.log('audio has started');
 
-recognition.soundend = console.log('sound has end');
+recognition.soundend = console.log('sound has ended');
+recognition.audioend = console.log('audio has ended');
