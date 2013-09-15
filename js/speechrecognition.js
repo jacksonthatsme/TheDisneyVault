@@ -39,4 +39,4 @@ recognition.onaudiostart = console.log('audio has started');
 
 recognition.soundend = console.log('sound has ended' );
 recognition.audioend = console.log('audio has ended' );
-recognition.onresult = console.log( results.length );
+recognition.onresult = console.log( event.results.length );
