@@ -1,45 +1,35 @@
-if (!('webkitSpeechRecognition' in window)) {
+    if (!('webkitSpeechRecognition' in window)) {
         alert('Web speech API is not supported in this browser');
       } 
     else {
 
-        // Speech recognition init
-        var recognition = new webkitSpeechRecognition();
+        // Speech recognizer init
+        var recognizer = new webkitSpeechRecognition();
 
         // continously listen to speech
-        recognition.continuous = true;
+        recognizer.continuous = true;
 
         // set languages supported
-        recognition.lang = ['English', ['en-US', 'United States']];
+        recognizer.lang = ['English', ['en-US', 'United States']];
 
         // We return non-final strings so gameplay isn't laggy
-        recognition.interimResults = true;
+        recognizer.interimResults = true;
 
-        recognition.onresult = function(e) {
+        recognizer.onresult = function(e) {
 
-       /*
- // set variable 
+        // set variable 
         var interim_transcript = '';
           if (e.results.length) {
              for (var i = event.resultIndex; i < event.results.length; i++) {
                  interim_transcript = event.results[i][0].transcript; 
 
-                 // if the object isn't moving, allow commands to be sent down.
-                 //if(!move){gameLoop(interim_transcript,'voice');}
+                 console.log(interim_transcript);
               }
             
            
           }
-*/
         };
+      // start speech to text translation
+      recognizer.start();
+
    }
-
-$('.recognize').click(function(){
-	// start speech to text translation
-      //recognition.start();
-});
-recognition.onsoundstart = console.log('sound has started');
-recognition.onaudiostart = console.log('audio has started');
-
-recognition.soundend = console.log('sound has ended' );
-recognition.audioend = console.log('audio has ended' );
