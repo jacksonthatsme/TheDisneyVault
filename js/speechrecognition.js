@@ -17,7 +17,8 @@ if (!('webkitSpeechRecognition' in window)) {
 
         recognition.onresult = function(e) {
 
-        // set variable 
+       /*
+ // set variable 
         var interim_transcript = '';
           if (e.results.length) {
              for (var i = event.resultIndex; i < event.results.length; i++) {
@@ -29,6 +30,7 @@ if (!('webkitSpeechRecognition' in window)) {
             
            
           }
+*/
         };
       // start speech to text translation
       recognition.start();
@@ -39,4 +41,3 @@ recognition.onaudiostart = console.log('audio has started');
 
 recognition.soundend = console.log('sound has ended' );
 recognition.audioend = console.log('audio has ended' );
-recognition.onresult = console.log( event.results.length );
