@@ -36,7 +36,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
 $('.recognize').click(function(){
 	// start speech to text translation
-      recognition.start();
+      //recognition.start();
 });
 recognition.onsoundstart = console.log('sound has started');
 recognition.onaudiostart = console.log('audio has started');
