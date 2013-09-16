@@ -32,10 +32,12 @@ if (!('webkitSpeechRecognition' in window)) {
           }
 */
         };
-      // start speech to text translation
-      recognition.start();
-
    }
+
+$('.recognize').click(function(){
+	// start speech to text translation
+      recognition.start();
+});
 recognition.onsoundstart = console.log('sound has started');
 recognition.onaudiostart = console.log('audio has started');
 
