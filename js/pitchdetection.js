@@ -92,6 +92,7 @@ function gotStream(stream) {
 
 function toggleLiveInput() {
     getUserMedia({audio:true}, gotStream);
+    console.log(audioContext.currentTime);
 }
 
 function togglePlayback() {
