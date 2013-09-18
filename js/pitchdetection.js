@@ -44,7 +44,6 @@ function gotStream(stream) {
     analyser = audioContext.createAnalyser();
     analyser.fftSize = 2048;
     convertToMono( mediaStreamSource ).connect( analyser );
-    updatePitch();
 }
 
 function toggleLiveInput() {
