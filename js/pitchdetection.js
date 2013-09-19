@@ -44,14 +44,15 @@ function gotStream(stream) {
     analyser = audioContext.createAnalyser();
     analyser.fftSize = 2048;
     convertToMono( mediaStreamSource ).connect( analyser );
+    
+    var now = audioContext.currentTime;
+	if (now > 4){
+		console.log('at 4');
+	}
 }
 
 function toggleLiveInput() {
     getUserMedia({audio:true}, gotStream);
-}
-var now = audioContext.currentTime;
-if (now > 4){
-	console.log('at 4');
 }
 
 function togglePlayback() {
