@@ -48,11 +48,10 @@ function gotStream(stream) {
 
 function toggleLiveInput() {
     getUserMedia({audio:true}, gotStream);
-    var now = audioContext.currentTime;
-    console.log(audioContext.currentTime);
-    if (now > 4){
-	    console.log('at 4');
-    }
+}
+var now = audioContext.currentTime;
+if (now > 4){
+	console.log('at 4');
 }
 
 function togglePlayback() {
