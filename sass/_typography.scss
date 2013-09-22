@@ -1,8 +1,8 @@
-h1,h2,h3,h4{
+h1,h2,h3{
 	font-family: $silentina;
 }
 h1{
-	font-family: 'Adobe Caslon Pro';
+	font-family: $crimson;
 	font-weight: 300;
 	font-size: 47px;
 	color: $light-gold;
@@ -11,4 +11,16 @@ h3{
 	font-size: 20px;
 	color: $light-grey;
 	line-height: 32px;
+}
+h4{
+	font-family: $crimson;
+	font-size: 14px;
+	color: $light-grey;
+}
+
+#microphone-modal{
+	h4{
+		font-style: italic;
+		margin-top: 30px;
+	}
 }

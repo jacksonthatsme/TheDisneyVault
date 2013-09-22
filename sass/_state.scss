@@ -4,3 +4,6 @@
 		background-position-x: center;
 		background-position-y: 5px;
 	}
+.modal-effect{
+	@include modal-effect;
+}

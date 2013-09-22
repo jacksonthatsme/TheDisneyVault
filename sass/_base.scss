@@ -33,7 +33,8 @@ $near-black: #0f1012;
 $light-grey: #b8b4aa;
 $light-gold: #cec89f;
 $dark-gold: #8f772d;
-$silentina: 'SilentinaFilm-Regular';
+$silentina: 'SilentinaFilm-Regular', helvetica, arial, sans-serif;
+$crimson: 'Crimson Text', Times New, serif;
 
 /* MIXINS */
 @mixin mickey-border{
@@ -74,7 +75,15 @@ $silentina: 'SilentinaFilm-Regular';
 	-webkit-box-sizing: $box-type;
 	-o-box-sizing: $box-type;
 }
-
+@mixin modal-effect{
+	-webkit-transform: translateY(120%);
+	-moz-transform: translateY(120%);
+	-ms-transform: translateY(120%);
+	transform: translateY(120%);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
 
 /* BASE */
 body{
