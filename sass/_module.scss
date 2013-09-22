@@ -1,0 +1,29 @@
+.border{
+	@include border;
+}
+.border-split{
+	@include border-split;
+	@include box-sizing(border-box);
+	padding: 50px 40px 40px;
+}
+.microphone-button{
+	margin: 0 auto;
+	display: inline-block;
+}
+.microphone{
+	margin-bottom: -39px;
+	&:before{
+		content: url('img/microphone-side.png');
+		display: inline-block;
+		width: 100px;
+		height: 79px;
+		margin-right: -5px; 
+	}
+	&:after{
+		content: url('img/microphone-side.png');
+		display: inline-block;
+		width: 100px;
+		height: 79px;
+		margin-left: -5px; 
+	}
+}

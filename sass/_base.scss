@@ -30,7 +30,10 @@ a{
 
 /* GLOBAL VARIABLES */
 $near-black: #0f1012;
-$silentina: font-family:
+$light-grey: #b8b4aa;
+$light-gold: #d9d193;
+$dark-gold: #8f772d;
+$silentina: 'SilentinaFilm-Regular';
 
 /* MIXINS */
 @mixin mickey-border{
@@ -40,9 +43,34 @@ $silentina: font-family:
 	-webkit-border-image: url('img/TDV_MickeyBorder.png') 94 95 stretch;
 	-o-border-image: url('img/TDV_MickeyBorder.png') 94 95 stretch;
 	border-image: url('img/TDV_MickeyBorder.png') 94 95 fill stretch;
-	background-color: $near-black;
 }
+@mixin border-split{
+	border-style: solid;
+	border-width: 20px 20px;
+	-moz-border-image: url('img/TDV_Border_Split_top.png') 20 20 stretch;
+	-webkit-border-image: url('img/TDV_Border_Split_top.png') 20 20 stretch;
+	-o-border-image: url('img/TDV_Border_Split_top.png') 20 20 stretch;
+	border-image: url('img/TDV_Border_Split_top.png') 20 20 fill stretch;
+}
+@mixin border{
+	border-style: solid;
+	border-width: 20px 20px;
+	-moz-border-image: url('img/TDV_Border.png') 20 20 stretch;
+	-webkit-border-image: url('img/TDV_Border.png') 20 20 stretch;
+	-o-border-image: url('img/TDV_Border.png') 20 20 stretch;
+	border-image: url('img/TDV_Border.png') 20 20 fill stretch;
+}
+@mixin box-sizing($box-type){
+	border-box: $box-type;
+	-moz-box-sizing: $box-type; 
+	-webkit-box-sizing: $box-type;
+	-o-box-sizing: $box-type;
+}
+
+
 /* BASE */
 body{
 	@include mickey-border;
+	background: $near-black;
+	text-align: center;
 }
