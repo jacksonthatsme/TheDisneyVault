@@ -31,7 +31,7 @@ a{
 /* GLOBAL VARIABLES */
 $near-black: #0f1012;
 $light-grey: #b8b4aa;
-$light-gold: #d9d193;
+$light-gold: #cec89f;
 $dark-gold: #8f772d;
 $silentina: 'SilentinaFilm-Regular';
 
@@ -59,6 +59,14 @@ $silentina: 'SilentinaFilm-Regular';
 	-webkit-border-image: url('img/TDV_Border.png') 20 20 stretch;
 	-o-border-image: url('img/TDV_Border.png') 20 20 stretch;
 	border-image: url('img/TDV_Border.png') 20 20 fill stretch;
+}
+@mixin border-no-bottom{
+	border-style: solid;
+	border-width: 20px 20px;
+	-moz-border-image: url('img/TDV_Border_no_bottom.png') 20 20 stretch;
+	-webkit-border-image: url('img/TDV_Border_no_bottom.png') 20 20 stretch;
+	-o-border-image: url('img/TDV_Border_no_bottom.png') 20 20 stretch;
+	border-image: url('img/TDV_Border_no_bottom.png') 20 20 fill stretch;
 }
 @mixin box-sizing($box-type){
 	border-box: $box-type;

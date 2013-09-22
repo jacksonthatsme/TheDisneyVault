@@ -6,24 +6,55 @@
 	@include box-sizing(border-box);
 	padding: 50px 40px 40px;
 }
-.microphone-button{
-	margin: 0 auto;
-	display: inline-block;
+.border-no-bottom{
+	@include border-no-bottom;
 }
-.microphone{
-	margin-bottom: -39px;
-	&:before{
-		content: url('img/microphone-side.png');
+/* MODAL STYLE */
+.simplemodal-overlay{
+	background-color: $near-black;
+}
+.simplemodal-container{
+	bottom: 40px;
+}
+#microphone-modal{
+	display: none;
+	.microphone-button{
+		margin: 0 auto;
 		display: inline-block;
-		width: 100px;
-		height: 79px;
-		margin-right: -5px; 
 	}
-	&:after{
-		content: url('img/microphone-side.png');
-		display: inline-block;
-		width: 100px;
-		height: 79px;
-		margin-left: -5px; 
+	.microphone{
+		margin-bottom: -39px;
+		&:before{
+			content: url('img/microphone-side.png');
+			display: inline-block;
+			width: 100px;
+			height: 79px;
+			margin-right: -5px; 
+		}
+		&:after{
+			content: url('img/microphone-side.png');
+			display: inline-block;
+			width: 100px;
+			height: 79px;
+			margin-left: -5px; 
+		}
+	}
+	.border-no-bottom{
+		@include box-sizing(border-box);
+		padding: 50px 40px 40px;
+		background: -moz-linear-gradient(top, rgba(217,209,147,.18) 0%, rgba(217,209,147,0) 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(217,209,147,1)), color-stop(100%,rgba(217,209,147,0)));
+		background: -webkit-linear-gradient(top, rgba(217,209,147,.18) 0%,rgba(217,209,147,0) 100%);
+		background: -o-linear-gradient(top, rgba(217,209,147,.18) 0%,rgba(217,209,147,0) 100%);
+		background: -ms-linear-gradient(top, rgba(217,209,147,.18) 0%,rgba(217,209,147,0) 100%);
+		background: linear-gradient(to bottom, rgba(217,209,147,.18) 0%,rgba(217,209,147,0) 100%);
+		background-repeat: no-repeat;	
+		h3{
+			&.tap-click:before{
+				content: "Click";
+			}
+		}
 	}
 }
+
+
