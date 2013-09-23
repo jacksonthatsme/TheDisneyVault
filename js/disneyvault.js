@@ -1,9 +1,12 @@
+$('#microphone-modal').modal();
 $( document ).ready(function() {
-    $('.loading').delay( 3000 ).fadeOut();
-    
+    $( ".loading" ).delay(3000).fadeOut( function() {
+    	$('#microphone-modal').addClass('modal-effect');
+  });
+
 });
 
-$('#microphone-modal').modal();
+//$('#microphone-modal').modal();
 
 $('#microphone-modal').jrumble({
 		x: .5,
@@ -12,3 +15,4 @@ $('#microphone-modal').jrumble({
 		speed: 160
 });
 $('#microphone-modal').trigger('startRumble');
+
