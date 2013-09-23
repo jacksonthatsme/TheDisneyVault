@@ -177,3 +177,10 @@
 2013-09-22 19:00:15 overwrite style.css 
 2013-09-22 19:00:20 overwrite style.css 
 2013-09-22 19:06:39 overwrite style.css 
+2013-09-23 00:20:45 overwrite style.css 
+2013-09-23 00:21:05 overwrite style.css 
+2013-09-23 00:22:00 overwrite style.css 
+2013-09-23 00:22:15 overwrite style.css 
+2013-09-23 00:24:05     error sass/style.scss (Line 17 of sass/_layout.scss: Invalid CSS after "...ition-property:": expected expression (e.g. 1px, bold), was "}")
+2013-09-23 00:24:05 overwrite style.css 
+2013-09-23 00:24:38 overwrite style.css 

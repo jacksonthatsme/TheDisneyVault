@@ -2,3 +2,15 @@
 	max-width: 900px;
 	margin: 0 auto;
 }
+.loading{
+	position:absolute;
+    top:0;
+    right:0;
+    bottom:0; 
+    left:0;
+    background-color: $near-black;
+    z-index: 1003;
+    background-image: url(img/TDV_loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}

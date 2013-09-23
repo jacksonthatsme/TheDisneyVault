@@ -1,4 +1,7 @@
-$('#microphone-modal').modal();
+$( document ).ready(function() {
+    $('.loading').fadeOut();
+    $('#microphone-modal').modal();
+});
 
 $('#microphone-modal').jrumble({
 		x: .5,
