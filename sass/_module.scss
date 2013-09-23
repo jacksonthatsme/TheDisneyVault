@@ -24,7 +24,8 @@
 	}
 	.microphone{
 		margin-bottom: -39px;
-		&:before{
+		/*
+&:before{
 			content: url('img/microphone-side.png');
 			display: inline-block;
 			width: 100px;
@@ -38,6 +39,7 @@
 			height: 79px;
 			margin-left: -5px; 
 		}
+*/
 	}
 	.border-no-bottom{
 		@include box-sizing(border-box);
@@ -56,5 +58,8 @@
 		}
 	}
 }
-
-
+.branding{
+	img{
+		width: 300px;
+	}
+}

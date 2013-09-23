@@ -1,13 +1,14 @@
+/*
 $('#microphone-modal').modal();
 $( document ).ready(function() {
-    $( ".loading" ).delay(3000).fadeOut( function() {
-    	$('#microphone-modal').addClass('modal-effect');
-  });
+    $( ".loading" ).delay(3000).fadeOut();
 
 });
+*/
 
 //$('#microphone-modal').modal();
 
+//RUMBLE ON MODAL
 $('#microphone-modal').jrumble({
 		x: .5,
 		y: 2,
@@ -16,3 +17,7 @@ $('#microphone-modal').jrumble({
 });
 $('#microphone-modal').trigger('startRumble');
 
+//PAGE DOWN MARGIN
+var wh = $(window).height();
+
+$('.pagedown').css('margin-bottom', (wh * .70) );
