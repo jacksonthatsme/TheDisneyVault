@@ -1,4 +1,4 @@
-.mic-with-bg{
+.mic-blink{
 		background-image: url('img/TDV_Microphone_animation.gif');
 		background-repeat: no-repeat;
 		background-position-x: center;
@@ -6,4 +6,7 @@
 	}
 .modal-effect{
 	@include modal-effect;
+}
+.pre-dust{
+  overflow: hidden !important;
 }

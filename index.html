@@ -17,7 +17,7 @@
 	<!-- 	Link to CSS -->
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pre-dust">
 <!-- 	LOADING SCREEN -->
   <!-- <div class="loading"></div> -->
 	<!-- 	Open Container -->
@@ -33,16 +33,17 @@
 	<!-- 	Close Container -->
 	<!-- 	MODALS -->
 	<!-- Microphone Modal Content	 -->
-		<div id="microphone-modal">
+		<div id="microphone-modal" class="modal-effect">
 			<div class="microphone">
-				<img class="microphone-button mic-with-bg" src="img/microphone-button.png"  usemap =#microphone>
+				<img class="microphone-button mic-blink" src="img/microphone-button.png"  usemap =#microphone>
 				<map id="microphone" name="microphone">
 				<area shape="circle" coords="70,34,28" onclick="toggleLiveInput()" href="javascript:void(0)"/>	
 				</map>
 			</div>
 			<div class="border-no-bottom">
-			   <h5 class="tap-click"></span> the microphone and then blow.</h5>
-				<h3>This vault looks very dusty, why don't we clear it off?</h3>
+			   <h5 class="tap-click"></span> the microphone icon above</h5>
+				<h3>The vault looks very dusty, why don't we clear it off?</h3>
+				<h3 style="display:none;">Now blow...</h3>
 				<h4 class="simplemodal-close">Skip This</h4>
 			</div>
 		</div>

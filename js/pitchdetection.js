@@ -44,7 +44,7 @@ function gotStream(stream) {
 
 function toggleLiveInput() {
     getUserMedia({audio:true}, gotStream);
-    $('#microphone-modal').hide();
+    $('#microphone-modal h3').toggle();
 }
 
 /*
