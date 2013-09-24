@@ -1,15 +1,8 @@
-var audioContext;
-window.addEventListener('load', init, false);
-function init() {
-  try {
-    // Fix up for prefixing
-    window.AudioContext = window.AudioContext||window.webkitAudioContext;
-    context = new AudioContext();
-  }
-  catch(e) {
-    alert('Web Audio API is not supported in this browser');
-  }
-}
+var audioContext = new AudioContext();
+var isPlaying = false;
+var sourceNode = null;
+var analyser = null;
+var theBuffer = null;
 
 window.onload = function() {}
 
@@ -24,7 +17,7 @@ function convertToMono( input ) {
 }
 
 function error() {
-    alert('Web Audio API is not supported in this browser);
+    alert('Stream generation failed.');
 }
 
 function getUserMedia(dictionary, callback) {
