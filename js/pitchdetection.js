@@ -1,14 +1,15 @@
-var audioContext = new AudioContext();
-var isPlaying = false;
-var sourceNode = null;
-var analyser = null;
-var theBuffer = null;
-var detectorElem, 
-	canvasElem,
-	pitchElem,
-	noteElem,
-	detuneElem,
-	detuneAmount;
+var audioContext;
+window.addEventListener('load', init, false);
+function init() {
+  try {
+    // Fix up for prefixing
+    window.AudioContext = window.AudioContext||window.webkitAudioContext;
+    context = new AudioContext();
+  }
+  catch(e) {
+    alert('Web Audio API is not supported in this browser');
+  }
+}
 
 window.onload = function() {}
 
@@ -20,10 +21,6 @@ function convertToMono( input ) {
     splitter.connect( merger, 0, 0 );
     splitter.connect( merger, 0, 1 );
     return merger;
-}
-
-function error() {
-    alert('Stream generation failed.');
 }
 
 function getUserMedia(dictionary, callback) {
