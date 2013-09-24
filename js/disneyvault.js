@@ -1,12 +1,10 @@
-/*
-$('#microphone-modal').modal();
+
 $( document ).ready(function() {
     $( ".loading" ).delay(3000).fadeOut();
 
 });
-*/
 
-//$('#microphone-modal').modal();
+$('#microphone-modal').modal();
 
 //RUMBLE ON MODAL
 $('#microphone-modal').jrumble({
