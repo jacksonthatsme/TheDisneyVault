@@ -23,6 +23,10 @@ function convertToMono( input ) {
     return merger;
 }
 
+function error() {
+    alert('Web Audio API is not supported in this browser);
+}
+
 function getUserMedia(dictionary, callback) {
     try {
         if (!navigator.getUserMedia)
