@@ -40,9 +40,6 @@ function gotStream(stream) {
     convertToMono( mediaStreamSource ).connect( analyser );
     
     var now = audioContext.currentTime;
-	if (now > 4){
-		console.log('at 4');
-	}
 }
 
 function toggleLiveInput() {
