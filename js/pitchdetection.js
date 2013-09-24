@@ -55,6 +55,7 @@ function toggleLiveInput() {
     getUserMedia({audio:true}, gotStream);
 }
 
+/*
 function togglePlayback() {
     var now = audioContext.currentTime;
 
@@ -85,3 +86,4 @@ function togglePlayback() {
 
     return "stop";
 }
+*/
