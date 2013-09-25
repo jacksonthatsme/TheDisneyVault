@@ -1,9 +1,14 @@
+.mic-blink, .mic-on{
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: 5px;
+}
 .mic-blink{
-		background-image: url('img/TDV_Microphone_animation.gif');
-		background-repeat: no-repeat;
-		background-position-x: center;
-		background-position-y: 5px;
-	}
+	background-image: url('img/TDV_Microphone_animation.gif');
+}
+.mic-on{
+	background-image: url('img/TDV_mic_on.png');
+}
 .modal-effect{
 	@include modal-effect;
 }

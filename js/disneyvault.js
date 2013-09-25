@@ -15,4 +15,8 @@ $('#microphone-modal').trigger('startRumble');
 //PAGE DOWN MARGIN
 var wh = $(window).height();
 
-$('.pagedown').css('margin-bottom', (wh * .70) );
+$('.pagedown').css('margin-bottom', (wh/3) );
+
+$('.simplemodal-close').click(function(){
+	$('body').removeClass('pre-dust');
+});

@@ -39,7 +39,29 @@
 	}
 }
 .branding{
+	margin-top: 40px;
 	img{
-		width: 300px;
 	}
 }
+.pagedown{
+	margin-top: 60px;
+	& *{
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+input[type=email]{
+	font-size: 25px;
+	line-height: 35px;
+	@include border;
+	@include background-clip;
+	outline: none;
+	font-family: $silentina;
+	color: $dark-gold;
+	width: 500px;
+	text-align: center;
+	background-color: $near-white;
+}
+@include placeholder-style($dark-gold);
+

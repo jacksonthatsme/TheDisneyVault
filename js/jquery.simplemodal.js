@@ -100,6 +100,7 @@
 	 */
 	$.modal.close = function () {
 		$.modal.impl.close();
+		$('body').removeClass('pre-dust');
 	};
 
 	/*

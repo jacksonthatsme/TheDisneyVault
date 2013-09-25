@@ -1,12 +1,14 @@
-h1,h2,h3,h5{
+h1,h2,h3,h5,p{
 	font-family: $silentina;
 	color: $light-grey;
+	margin: 0 auto;
 }
 h1{
 	font-family: $crimson;
-	font-weight: 300;
-	font-size: 47px;
-	color: $light-gold;
+	font-weight: 100;
+	font-size: 56px;
+	font-style: italic;
+	color: $near-white;
 }
 h3{
 	font-size: 30px;
@@ -36,4 +38,11 @@ h4{
 }
 h5{
   font-size: 13px;
+}
+p{
+	font-size: 15px;
+	line-height: 20px;
+	max-width: 500px;
+	margin-top: 30px;
+	color: $light-gold;
 }
