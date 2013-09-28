@@ -2,7 +2,7 @@
 $( document ).ready(function() {
     $( ".loading" ).delay(3000).fadeOut();
     $('#microphone-modal').modal({
-	    opacity:80
+	    opacity:40
     });
     $('#alpha_dust').seeThru({
 			width: '100%',
