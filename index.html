@@ -19,11 +19,12 @@
 </head>
 <body class="pre-dust">
 <!-- 	LOADING SCREEN -->
-	<div class="loading"></div>
+<!-- 	<div class="loading"></div> -->
 <!-- 	Alpha Dust Video -->
-	<video id="alpha_dust">
+<video id="alpha_dust">
 		<source src="video/alpha_dust.mp4" type="video/mp4">
-	</video>
+</video>
+
 	<nav class="main">
 		<!-- 	Open Container -->
 		<div class="container">
@@ -58,18 +59,20 @@
 	<!-- 	Close Container -->
 	<!-- 	MODALS -->
 	<!-- Microphone Modal Content	 -->
-		<div id="microphone-modal" class="modal-effect">
+		<div id="microphone-modal">
 			<div class="microphone">
 				<img class="microphone-button mic-blink" src="img/microphone-button.png"  usemap =#microphone>
 				<map id="microphone" name="microphone">
 				<area shape="circle" coords="70,34,28" onclick="toggleLiveInput()" href="javascript:void(0)"/>	
 				</map>
 			</div>
-			<div class="border-no-bottom">
-			   <h5 class="tap-click"></span> the microphone icon above</h5>
-				<h3>The vault looks very dusty, why don't we clear it off?</h3>
-				<h3 style="display:none;">Now blow...</h3>
-				<h4 class="simplemodal-close">Skip This</h4>
+			<div class="border-split">
+				<div class="modal-wrap">
+				  	<h5 class="tap-click"></span> the microphone icon above</h5>
+					<h3>The vault looks very dusty, why don't we clear it off?</h3>
+					<h3 style="display:none;">Now blow...</h3>
+					<h4 class="simplemodal-close">Skip This</h4>
+				</div>
 			</div>
 		</div>
 		<!-- Microphone Modal Content	 -->

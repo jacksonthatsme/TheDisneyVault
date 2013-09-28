@@ -77,13 +77,13 @@ $crimson: 'Crimson Text', Times New, serif;
 	-o-box-sizing: $box-type;
 }
 @mixin modal-effect{
-	-webkit-transform: translateY(120%);
-	-moz-transform: translateY(120%);
-	-ms-transform: translateY(120%);
-	transform: translateY(120%);
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
+	-webkit-transform: translateY(0%);
+	-moz-transform: translateY(0%);
+	-ms-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: all 0.7s;
+	-moz-transition: all 0.7s;
+	transition: all 0.7s;
 }
 @mixin background-clip{
 	-webkit-background-clip: content-box;

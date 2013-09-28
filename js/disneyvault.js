@@ -1,7 +1,9 @@
 
 $( document ).ready(function() {
     $( ".loading" ).delay(3000).fadeOut();
-    //$('#microphone-modal').modal();
+    $('#microphone-modal').modal({
+	    opacity:80
+    });
     $('#alpha_dust').seeThru({
 			width: '100%',
 			height: '100%'

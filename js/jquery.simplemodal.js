@@ -100,7 +100,6 @@
 	 */
 	$.modal.close = function () {
 		$.modal.impl.close();
-		$('body').removeClass('pre-dust');
 	};
 
 	/*
@@ -327,7 +326,7 @@
 				.addClass('simplemodal-overlay')
 				.css($.extend(s.o.overlayCss, {
 					display: 'none',
-					opacity: .8,
+					opacity: s.o.opacity / 100,
 					height: s.o.modal ? d[0] : 0,
 					width: s.o.modal ? d[1] : 0,
 					position: 'fixed',
@@ -592,16 +591,16 @@
 			s.o.autoPosition && s.setPosition();
 		},
 		setPosition: function () {
-			var s = this, bottom, left,
+			var s = this, top, left,
 				hc = (w[0]/2) - (s.d.container.outerHeight(true)/2),
 				vc = (w[1]/2) - (s.d.container.outerWidth(true)/2),
 				st = s.d.container.css('position') !== 'fixed' ? wndw.scrollTop() : 0;
 
 			if (s.o.position && Object.prototype.toString.call(s.o.position) === '[object Array]') {
-				bottom = st + (s.o.position[0] || hc);
+				top = st + (s.o.position[0] || hc);
 				left = s.o.position[1] || vc;
 			} else {
-				bottom = st - hc;
+				top = st + hc;
 				left = vc;
 			}
 			s.d.container.css({left: left, top: top});
