@@ -288,8 +288,8 @@ var methods = {
 
 					} else if (settings.start === 'external'){
 
-						video.play();
-						video.delay(100).pause(); // fake play to initialize playhead
+						video.play().delay(50);
+						video.pause(); // fake play to initialize playhead
 						drawFrame();
 
 					} else {
