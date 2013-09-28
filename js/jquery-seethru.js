@@ -287,13 +287,10 @@ var methods = {
 						});
 
 					} else if (settings.start === 'external'){
-						$( document ).ready(function() {
 
-						video.play().delay(50).queue(function() {
-							video.pause();
-						});
+						video.play();
+						video.pause();
 						drawFrame();
-						});
 
 					} else {
 
