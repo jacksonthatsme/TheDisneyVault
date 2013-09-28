@@ -44,7 +44,7 @@ function gotStream(stream) {
 
 function toggleLiveInput() {
 }
-$('map#microphone > area').click(function{
+$('#microphone > area').click(function{
 	var dust = document.getElementById('alpha_dust');
 
 	getUserMedia({audio:true}, gotStream);
