@@ -43,12 +43,17 @@ function gotStream(stream) {
 }
 
 function toggleLiveInput() {
-    getUserMedia({audio:true}, gotStream);
+}
+$('map#microphone > area').click(function{
+	var dust = document.getElementById('alpha_dust');
+
+	getUserMedia({audio:true}, gotStream);
     $('#microphone-modal h3').toggle();
     $('img.microphone-button').removeClass('mic-blink');
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
-}
+    dust.play();
+});
 
 /*
 function togglePlayback() {
