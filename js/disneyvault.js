@@ -7,8 +7,7 @@ $( document ).ready(function() {
     $('#alpha_dust').seeThru({
 			width: '100%',
 			height: '100%',
-			start: 'external',
-			end: 'stop'
+			start: 'external'
 	});
     
 });
