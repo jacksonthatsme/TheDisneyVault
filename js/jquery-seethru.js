@@ -288,7 +288,9 @@ var methods = {
 
 					} else if (settings.start === 'external'){
 
-						video.play().delay(500).pause();
+						video.play().delay(500).queue(function() {
+							video.pause();
+						});
 						drawFrame();
 
 					} else {
