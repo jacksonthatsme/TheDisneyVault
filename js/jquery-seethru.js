@@ -331,12 +331,16 @@ var methods = {
 
 						});
 
-					} else {
+					} else if (settings.end === 'stop'){
+						$this.on('ended.seeThru', function(){
+							video.hide();
+						}); 
+					
+					}else {
 
 						$this.on('ended.seeThru', function(){
 
 							video.pause();
-							$('.seeThru-display').hide();
 
 							if (settings.start == 'clicktoplay'){
 
