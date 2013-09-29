@@ -336,7 +336,7 @@ var methods = {
 						$this.on('ended.seeThru', function(){
 
 							video.pause();
-							video.hide();
+							$('.seeThru-display').hide();
 
 							if (settings.start == 'clicktoplay'){
 
