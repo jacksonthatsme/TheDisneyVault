@@ -336,6 +336,7 @@ var methods = {
 						$this.on('ended.seeThru', function(){
 
 							video.pause();
+							$this.hide();
 
 							if (settings.start == 'clicktoplay'){
 
@@ -345,9 +346,6 @@ var methods = {
 
 								});
 
-							}
-							else{
-								$this.hide();
 							}
 
 						});
