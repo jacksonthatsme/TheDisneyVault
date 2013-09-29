@@ -107,7 +107,6 @@ $crimson: 'Crimson Text', Times New, serif;
 
 /* BASE */
 body{
-	@include mickey-border;
 	background: $near-black;
 	text-align: center;
 	background-image: url(img/TDV_Hero_Texture.jpg);

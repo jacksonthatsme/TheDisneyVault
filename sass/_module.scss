@@ -45,6 +45,7 @@
 		margin: 0 auto;
 	}
 }
+/* FORM STYLE */
 input[type=email]{
 	font-size: 25px;
 	line-height: 35px;
@@ -77,3 +78,18 @@ input[type=submit]{
 	
 }
 @include placeholder-style($dark-gold);
+.meta{
+	margin-top: -10px;
+	z-index: 2000;
+	position: relative;
+	text-align: left;
+	height: 30px;
+	color: $dark-gold;
+	font-family: $silentina;
+	ul{
+		li{
+			display: inline-block;
+			padding-right: 20px;
+		}
+	}
+}
