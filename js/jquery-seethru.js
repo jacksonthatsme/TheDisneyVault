@@ -333,7 +333,7 @@ var methods = {
 
 					} else if (settings.end === 'stop'){
 						$this.on('ended.seeThru', function(){
-							video.hide();
+							$('canvas').hide();
 						}); 
 					
 					}else {
