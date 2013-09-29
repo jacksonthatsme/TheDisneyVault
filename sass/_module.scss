@@ -25,7 +25,7 @@
 	}
 	.border-split{
 		max-width: 600px;
-		background-color: rgba(0,0,0,.8);
+		background-color: $near-black;
 		@include background-clip;
 		.modal-wrap{
 			padding: 30px 50px 40px;
@@ -38,7 +38,7 @@
 	}
 }
 .pagedown{
-	margin-top: 60px;
+	margin-top: 120px;
 	& *{
 		display: block;
 		text-align: center;
@@ -54,7 +54,26 @@ input[type=email]{
 	font-family: $silentina;
 	color: $dark-gold;
 	width: 500px;
+	height: 45px;
 	text-align: center;
-	background-color: $near-white;
+	background-color: Transparent;
+}
+input[type=submit]{
+	background-image: url('img/submit-btn.png');
+	width: 109px;
+	height: 39px;
+	background-repeat: no-repeat;
+	border: none;
+	font-family: $silentina;
+	text-transform: uppercase;
+	color: $dark-gold;
+	font-size: 16px;
+	background-color: Transparent;
+	line-height: 25px;
+	padding-top: 6px;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	
 }
 @include placeholder-style($dark-gold);
