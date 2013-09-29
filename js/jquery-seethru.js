@@ -346,6 +346,9 @@ var methods = {
 								});
 
 							}
+							else{
+								$this.hide();
+							}
 
 						});
 					}
