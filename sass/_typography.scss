@@ -27,6 +27,7 @@ h4{
 		font-style: italic;
 		margin-top: 40px;
 		cursor: pointer;
+		color: #4C4947;
 	}
 	h5{
 			&.tap-click:before{
@@ -45,15 +46,23 @@ p{
 	line-height: 22px;
 	max-width: 500px;
 	color: $light-gold;
+	&:first-letter{
+		font-size: 19px;
+	}
 }
 .two-up{
 	columns: 220px 2;
 	-webkit-columns: 240px 2;
 	-moz-columns: 240px 2;
 	-o-columns: 240px 2;
-	column-gap: 20px;
-	-webkit-column-gap: 40px;
-	-moz-column-gap: 40px;
-	-o-column-gap: 40px;
+	column-gap: 30px;
+	-webkit-column-gap: 30px;
+	-moz-column-gap: 30px;
+	-o-column-gap: 30px;
 	text-align: left;
+}
+.or{
+	text-align: left;
+	margin-left: -230px;
+	margin-top: 20px;
 }
