@@ -2,7 +2,7 @@
 $( document ).ready(function() {
     $( ".loading" ).delay(3000).fadeOut();
     $('#microphone-modal').modal({
-	    opacity:40
+	    opacity:80
     });
     $('#alpha_dust').seeThru({
 			width: '100%',
@@ -20,9 +20,27 @@ $('.pagedown').css('margin-bottom', (wh/3) );
 
 $('.simplemodal-close').click(function(){
 	$('body').removeClass('pre-dust');
+	$('canvas').hide();
 });
 
 //MODAL LINKS
 $('.about-link').click(function(){
-	$('#about').modal({opacity:80});
+	$('#about').modal({opacity:80, overlayClose: true});
+});
+$('.legal-link').click(function(){
+	$('#legal').modal({opacity:80, overlayClose: true});
+});
+$('.colophon-link').click(function(){
+	$('#colophon').modal({opacity:80, overlayClose: true});
+});
+
+$('area').click(function(){
+	var dust = document.getElementById('alpha_dust');
+
+	//getUserMedia({audio:true}, gotStream);
+    $('#microphone-modal h3').toggle();
+    $('img.microphone-button').removeClass('mic-blink');
+    $('img.microphone-button').addClass('mic-on');
+    $('#microphone-modal h5').remove();
+    dust.play();
 });

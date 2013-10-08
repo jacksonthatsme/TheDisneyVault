@@ -11,9 +11,6 @@
 .simplemodal-overlay{
 	background-color: $near-black;
 }
-.simplemodal-container{
-	bottom: 70px;
-}
 #microphone-modal{
 	display: none;
 	.microphone-button{
@@ -27,10 +24,10 @@
 		max-width: 600px;
 		background-color: $near-black;
 		@include background-clip;
-		.modal-wrap{
-			padding: 30px 50px 40px;
-		}
 	}
+}
+.modal-wrap{
+			padding: 30px 50px 40px;
 }
 .branding{
 	margin-top: 40px;
@@ -58,6 +55,9 @@ input[type=email]{
 	height: 45px;
 	text-align: center;
 	background-color: Transparent;
+	&:focus{
+		background-color: $near-white;
+	}
 }
 input[type=submit]{
 	background-image: url('img/submit-btn.png');
@@ -80,13 +80,14 @@ input[type=submit]{
 @include placeholder-style($dark-gold);
 .meta{
 	margin-top: -10px;
-	z-index: 2000;
+	z-index: 5;
 	position: relative;
 	text-align: left;
 	height: 30px;
 	color: $dark-gold;
 	font-family: $silentina;
 	ul{
+		width: intrinsic;
 		li{
 			display: inline-block;
 			padding-right: 20px;
@@ -95,4 +96,12 @@ input[type=submit]{
 }
 .modal{
 	display: none;
+	.border{
+		background-color: $near-black;
+		@include background-clip;
+		@include box-sizing(border-box);
+	}
+}
+section.top{
+	height: 100%;
 }

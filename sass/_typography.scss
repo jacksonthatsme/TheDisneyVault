@@ -45,6 +45,9 @@ p{
 	line-height: 22px;
 	max-width: 500px;
 	color: $light-gold;
+	a{
+		color: inherit;
+	}
 }
 .two-up{
 	columns: 220px 2;
