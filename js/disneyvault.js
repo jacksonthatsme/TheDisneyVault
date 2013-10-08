@@ -20,5 +20,4 @@ $('.pagedown').css('margin-bottom', (wh/3) );
 
 $('.simplemodal-close').click(function(){
 	$('body').removeClass('pre-dust');
-	$('canvas').hide();
 });

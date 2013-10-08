@@ -48,15 +48,6 @@ nav{
 section{
 	margin-top: 150px;
 	text-align: center;
-	&.description{
-		p{
-			text-align: left;
-			margin-top: 20px;
-			&:first-child{
-				margin-top: 0px;
-			}
-		}
-	}
 }
 canvas{
 	margin: 0px;
