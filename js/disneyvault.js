@@ -21,3 +21,8 @@ $('.pagedown').css('margin-bottom', (wh/3) );
 $('.simplemodal-close').click(function(){
 	$('body').removeClass('pre-dust');
 });
+
+//MODAL LINKS
+$('.about-link').click(function(){
+	$('#about').modal({opacity:80});
+});
