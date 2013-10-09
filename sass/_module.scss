@@ -59,9 +59,9 @@ input[type=email]{
 		background-color: $near-white;
 	}
 }
-input[type=submit]{
+div.submit{
 	background-image: url('img/submit-btn.png');
-	width: 109px;
+	width: 108px;
 	height: 39px;
 	background-repeat: no-repeat;
 	border: none;
@@ -71,10 +71,18 @@ input[type=submit]{
 	font-size: 16px;
 	background-color: Transparent;
 	line-height: 25px;
-	padding-top: 6px;
+	padding-top: 9px;
 	display: block;
 	text-align: center;
 	margin: 0 auto;
+	cursor: pointer;
+	&:hover{
+		background-image: url('img/submit-btn-hover.png');
+	}
+	&:focus{
+		outline:none;
+		background-image: url('img/submit-btn-hover.png');
+	}
 	
 }
 @include placeholder-style($dark-gold);
