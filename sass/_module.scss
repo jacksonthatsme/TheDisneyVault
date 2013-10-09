@@ -48,13 +48,13 @@ input[type=email]{
 	line-height: 35px;
 	@include border;
 	@include background-clip;
+	background-color: transparent;
 	outline: none;
 	font-family: $silentina;
 	color: $dark-gold;
 	width: 500px;
 	height: 45px;
 	text-align: center;
-	background-color: Transparent;
 	&:focus{
 		background-color: $near-white;
 	}
@@ -74,7 +74,7 @@ div.submit{
 	padding-top: 9px;
 	display: block;
 	text-align: center;
-	margin: 0 auto;
+	margin: 10px auto 0;
 	cursor: pointer;
 	&:hover{
 		background-image: url('img/submit-btn-hover.png');
@@ -85,7 +85,7 @@ div.submit{
 	}
 	
 }
-@include placeholder-style($dark-gold);
+@include placeholder-style(shade($dark-gold, 40%));
 .meta{
 	margin-top: -10px;
 	z-index: 5;
@@ -112,4 +112,34 @@ div.submit{
 }
 section.top{
 	height: 100%;
+}
+section#description{
+	&:hover{
+		& > div.dvd img{
+			margin-left: 0px;
+			@include transition(rotate(-360deg));
+		}
+	}
+	p{
+		text-align: left;
+		width: 430px;
+		& + p{
+			margin-top: 40px;
+		}
+	}
+	div{
+		display: inline-block;
+		vertical-align: middle;
+		&.content-wrap{
+			margin-left: 30px;
+		}
+		&.dvd{
+			width: 100px;
+			overflow: hidden;
+			img{
+				margin-left: 100px;
+				@include transition-duration(.8s);
+			}
+		}
+	}
 }

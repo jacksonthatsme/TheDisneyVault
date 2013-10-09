@@ -108,6 +108,19 @@ $crimson: 'Crimson Text', Times New, serif;
 	   color: $color;  
 	}
 }
+@mixin transition-duration($time){
+	transition-duration: $time;
+	-webkit-transition-duration: $time;
+	-moz-transition-duration: $time;
+	-ms-transition-duration: $time;
+	-o-transition-duration: $time;
+}
+@mixin transition($transition){
+	transform: $transition;
+	-webkit-transform: $transition;
+	-moz-transform: $transition;
+	-o-transform: $transition;
+}
 
 /* BASE */
 body{

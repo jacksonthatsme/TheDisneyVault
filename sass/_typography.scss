@@ -6,10 +6,10 @@ h1,h2,h3,h5,p{
 h1{
 	font-family: $crimson;
 	font-weight: 100;
-	font-size: 56px;
+	font-size: 48px;
 	font-style: italic;
 	color: $near-white;
-	margin-bottom: 18px;
+	margin-bottom: 25px;
 }
 h3{
 	font-size: 30px;
@@ -19,14 +19,14 @@ h3{
 h4{
 	font-family: $crimson;
 	font-size: 14px;
-	color: $light-grey;
+	color: #4C4947;
+	font-style: italic;
+	margin-top: 40px;
+	cursor: pointer;
 }
 /* MICROPHONE MODAL TYPOGRAPHY */
 #microphone-modal{
 	h4{
-		font-style: italic;
-		margin-top: 40px;
-		cursor: pointer;
 	}
 	h5{
 			&.tap-click:before{
