@@ -31,13 +31,16 @@ html{
 	width: 100%;
 	height: 100%;
 }
+*:focus{
+  outline: none;
+}
 
 /* GLOBAL VARIABLES */
 $near-black: #0f1012;
 $light-grey: #b8b4aa;
-$light-gold: #d9d193;
+$light-gold: #D9D193; 
 $dark-gold: #8f772d;
-$near-white: #e5ddb3;
+$near-white: #8f772d;/* #e5ddb3 */
 $silentina: 'SilentinaFilm-Regular', helvetica, arial, sans-serif;
 $crimson: 'Crimson Text', Times New, serif;
 
@@ -126,8 +129,7 @@ $crimson: 'Crimson Text', Times New, serif;
 body{
 	background: $near-black;
 	text-align: center;
-	background-image: url(img/TDV_Hero_Texture.jpg);
-	background-size: cover;
+	background-image: url('img/tdv-bg_texture.jpg');
 	margin: 0px;
 	width: 100%;
 	padding: 0px;

@@ -56,7 +56,7 @@ input[type=email]{
 	height: 45px;
 	text-align: center;
 	&:focus{
-		background-color: $near-white;
+		background-color: #e5ddb3;
 	}
 }
 div.submit{
@@ -123,8 +123,14 @@ section#description{
 	p{
 		text-align: left;
 		width: 430px;
+		&.or{
+  		font-family: $crimson;
+  		font-size: 26px;
+  		color: $dark-gold;
+  		text-align: center;
+		}
 		& + p{
-			margin-top: 40px;
+			margin-top: 20px;
 		}
 	}
 	div{
