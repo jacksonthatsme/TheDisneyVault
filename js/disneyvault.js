@@ -48,5 +48,5 @@ $('area').click(function(){
     $('body').removeClass('pre-dust');
     setTimeout(function(){
       $('canvas').fadeOut();
-    }, 2000)
+    }, 4000)
 });
