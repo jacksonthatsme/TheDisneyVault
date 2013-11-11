@@ -44,5 +44,7 @@ $('area').click(function(){
     dust.play();
     $.modal.close();
     $('body').removeClass('pre-dust');
-    $('canvas').delay( 500 ).hide();
+    setTimeout(function(){
+      $('canvas').hide();
+    }, 500)
 });
