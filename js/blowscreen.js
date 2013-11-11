@@ -1,9 +1,5 @@
 var audioContext = new AudioContext();
 
-function error() {
-    alert('Stream generation failed.');
-}
-
 function getUserMedia(dictionary, callback) {
     try {
         navigator.getUserMedia = 
