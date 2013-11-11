@@ -42,7 +42,7 @@ $('area').click(function(){
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
     setTimeout(function(){
-      $.modal.close();
+      $.modal.fadeOut();
       dust.play();
     }, 500)
     $('body').removeClass('pre-dust');
