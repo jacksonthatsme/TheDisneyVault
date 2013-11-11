@@ -33,3 +33,14 @@ $('.legal-link').click(function(){
 $('.colophon-link').click(function(){
 	$('#colophon').modal({opacity:80, overlayClose: true});
 });
+
+$('area').click(function(){
+	var dust = document.getElementById('alpha_dust');
+
+	  getUserMedia({audio:true}, gotStream);
+    $('#microphone-modal h3').toggle();
+    $('img.microphone-button').removeClass('mic-blink');
+    $('img.microphone-button').addClass('mic-on');
+    $('#microphone-modal h5').remove();
+    dust.play();
+});

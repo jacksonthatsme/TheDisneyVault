@@ -3,18 +3,12 @@ var isPlaying = false;
 var sourceNode = null;
 var analyser = null;
 var theBuffer = null;
-
-window.onload = function() {}
-
-function convertToMono( input ) {
-    var splitter = audioContext.createChannelSplitter(2);
-    var merger = audioContext.createChannelMerger(2);
-
-    input.connect( splitter );
-    splitter.connect( merger, 0, 0 );
-    splitter.connect( merger, 0, 1 );
-    return merger;
-}
+var detectorElem, 
+	canvasElem,
+	pitchElem,
+	noteElem,
+	detuneElem,
+	detuneAmount;
 
 function error() {
     alert('Stream generation failed.');
@@ -22,8 +16,10 @@ function error() {
 
 function getUserMedia(dictionary, callback) {
     try {
-        if (!navigator.getUserMedia)
-        	navigator.getUserMedia = navigator.webkitGetUserMedia;
+        navigator.getUserMedia = 
+        	navigator.getUserMedia ||
+        	navigator.webkitGetUserMedia ||
+        	navigator.mozGetUserMedia;
         navigator.getUserMedia(dictionary, callback, error);
     } catch (e) {
         alert('getUserMedia threw exception :' + e);
@@ -37,25 +33,14 @@ function gotStream(stream) {
     // Connect it to the destination.
     analyser = audioContext.createAnalyser();
     analyser.fftSize = 2048;
-    convertToMono( mediaStreamSource ).connect( analyser );
-    
-    var now = audioContext.currentTime;
+    mediaStreamSource.connect( analyser );
+    updatePitch();
 }
-$('area').click(function(){
-	var dust = document.getElementById('alpha_dust');
-
-	  getUserMedia({audio:true}, gotStream);
-    $('#microphone-modal h3').toggle();
-    $('img.microphone-button').removeClass('mic-blink');
-    $('img.microphone-button').addClass('mic-on');
-    $('#microphone-modal h5').remove();
-    dust.play();
-});
 
 function toggleLiveInput() {
+    getUserMedia({audio:true}, gotStream);
 }
 
-/*
 function togglePlayback() {
     var now = audioContext.currentTime;
 
@@ -82,8 +67,6 @@ function togglePlayback() {
     sourceNode.start( now );
     isPlaying = true;
     isLiveInput = false;
-    updatePitch();
 
     return "stop";
 }
-*/
