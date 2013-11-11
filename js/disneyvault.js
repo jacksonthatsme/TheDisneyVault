@@ -41,10 +41,10 @@ $('area').click(function(){
     $('img.microphone-button').removeClass('mic-blink');
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
+    dust.play();
     setTimeout(function(){
       $.modal.close();
-      dust.play();
-    }, 500)
+    }, 300)
     $('body').removeClass('pre-dust');
     setTimeout(function(){
       $('canvas').fadeOut();
