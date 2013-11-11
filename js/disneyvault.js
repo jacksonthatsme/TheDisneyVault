@@ -43,4 +43,5 @@ $('area').click(function(){
     $('#microphone-modal h5').remove();
     dust.play();
     $.modal.close();
+    $('canvas').hide();
 });
