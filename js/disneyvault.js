@@ -8,7 +8,7 @@ $( document ).ready(function() {
 			width: '100%',
 			height: '100%',
 			start:'external',
-			end: 'rewind'
+			end: 'stop'
 	});
     
 });
@@ -44,4 +44,5 @@ $('area').click(function(){
     dust.play();
     $.modal.close();
     $('body').removeClass('pre-dust');
+    $('canvas').delay( 500 ).hide();
 });
