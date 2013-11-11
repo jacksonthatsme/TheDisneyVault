@@ -41,10 +41,12 @@ $('area').click(function(){
     $('img.microphone-button').removeClass('mic-blink');
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
-    dust.play();
-    $.modal.close();
+    setTimeout(function(){
+      $.modal.close();
+      dust.play();
+    }, 500)
     $('body').removeClass('pre-dust');
     setTimeout(function(){
       $('canvas').hide();
-    }, 500)
+    }, 1500)
 });
