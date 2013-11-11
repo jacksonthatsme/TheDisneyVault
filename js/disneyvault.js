@@ -42,5 +42,5 @@ $('area').click(function(){
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
     dust.play();
-    $.delay( 800 ).modal.close();
+    $.modal.close();
 });
