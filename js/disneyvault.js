@@ -53,6 +53,7 @@ document.addEventListener("whistle", function() {
       var dust = document.getElementById('alpha_dust');
       dust.play();
       $.modal.close();
+      $('body').removeClass('pre-dust');
       
       document.removeEventListener('whistle');
     }
