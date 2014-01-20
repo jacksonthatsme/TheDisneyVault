@@ -46,11 +46,13 @@ $('area').click(function(){
 });
 
 document.addEventListener("whistle", function() { 
-  
+    console.log("Whistle Captured");
 }, false);
+/*
 setInterval(function() {
   if(whistle.whistling) {
     console.log("user's whistling at the moment");
     console.log("intensity: " + whistle.intensity);
   }
 }, 10);
+*/
