@@ -44,3 +44,5 @@ $('area').click(function(){
     whistle.init()
 
 });
+
+document.addEventListener("whistle", function() { alert("whistle detected!"); }, false);
