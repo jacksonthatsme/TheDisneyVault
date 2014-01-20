@@ -45,4 +45,12 @@ $('area').click(function(){
 
 });
 
-document.addEventListener("whistle", function() { alert("whistle detected!"); }, false);
+document.addEventListener("whistle", function() { 
+  
+}, false);
+setInterval(function() {
+  if(whistle.whistling) {
+    console.log("user's whistling at the moment");
+    console.log("intensity: " + whistle.intensity);
+  }
+}), 10)
