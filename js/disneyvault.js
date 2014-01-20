@@ -58,3 +58,11 @@ document.addEventListener("whistle", function() {
       document.removeEventListener('whistle');
     }
 }, false);
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 960){
+    $('.dvd').addClass('animate');
+
+  }
+});
+

@@ -114,12 +114,6 @@ section.top{
 	height: 100%;
 }
 section#description{
-	&:hover{
-		& > div.dvd img{
-			margin-left: 0px;
-			@include transition(rotate(-360deg));
-		}
-	}
 	p{
 		text-align: left;
 		width: 430px;
@@ -145,6 +139,12 @@ section#description{
 			img{
 				margin-left: 100px;
 				@include transition-duration(.8s);
+			}
+			&.animate{
+			   img{
+  			   margin-left: 0px;
+  			   @include transition(rotate(-360deg));
+  			 }
 			}
 		}
 	}
