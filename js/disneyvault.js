@@ -52,7 +52,7 @@ document.addEventListener("whistle", function() {
       console.log("Whistle intensity is above 100");
       var dust = document.getElementById('alpha_dust');
       dust.play();
-      $('#microphone-modal').modal.close();
+      $.modal.close();
       $('body').removeClass('pre-dust');
       
       document.removeEventListener('whistle');
