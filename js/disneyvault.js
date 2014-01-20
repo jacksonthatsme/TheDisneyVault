@@ -37,19 +37,10 @@ $('.colophon-link').click(function(){
 $('area').click(function(){
 	var dust = document.getElementById('alpha_dust');
 
-    $('#microphone-modal h3').toggle();
+    $('#microphone-modal h3').text("Now Blow...");
     $('img.microphone-button').removeClass('mic-blink');
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
-    setTimeout(function(){
-    $('.modal').fadeOut(400);
-    $('.simplemodal-overlay').fadeOut(400);
-    }, 200);
-    setTimeout(function(){
-      dust.play();
-    }, 500);
-    $('body').removeClass('pre-dust');
-    setTimeout(function(){
-      $('canvas').fadeOut();
-    }, 2000);
+    whistle.init()
+
 });
