@@ -41,10 +41,12 @@ $('area').click(function(){
     $('img.microphone-button').removeClass('mic-blink');
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
-    whistle.init(null,true);
+    whistle.init();
 
 });
 
 document.addEventListener("whistle", function() { 
-    console.log("Whistle Captured");
+    if (whistle.intensity > 100) {
+      console.log("Whistle intensity is above 100");
+    }
 }, false);
