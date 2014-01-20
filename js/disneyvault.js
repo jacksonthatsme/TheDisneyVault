@@ -49,6 +49,6 @@ document.addEventListener("whistle", function() {
     if (whistle.intensity > 100) {
       console.log("Whistle intensity is above 100");
       var dust = document.getElementById('alpha_dust');
-      dust.play;
+      dust.play();
     }
 }, false);
