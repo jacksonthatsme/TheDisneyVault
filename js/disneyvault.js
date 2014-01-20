@@ -53,4 +53,4 @@ setInterval(function() {
     console.log("user's whistling at the moment");
     console.log("intensity: " + whistle.intensity);
   }
-}), 10);
+}, 10);
