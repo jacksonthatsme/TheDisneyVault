@@ -45,12 +45,15 @@ $('area').click(function(){
 
 });
 document.addEventListener("whistleReady", function() {
-    $('#microphone-modal h3').text("Now blow..");
+    $('#microphone-modal h3').text("Now blow...");
 }, false);
 document.addEventListener("whistle", function() { 
     if (whistle.intensity > 100) {
       console.log("Whistle intensity is above 100");
       var dust = document.getElementById('alpha_dust');
       dust.play();
+      $.modal.close();
+      
+      document.removeEventListener('whistle');
     }
 }, false);
