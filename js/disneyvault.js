@@ -37,14 +37,16 @@ $('.colophon-link').click(function(){
 $('area').click(function(){
 	var dust = document.getElementById('alpha_dust');
 
-    $('#microphone-modal h3').text("Now Blow...");
+    $('#microphone-modal h3').text("Allow use of your microphone above.");
     $('img.microphone-button').removeClass('mic-blink');
     $('img.microphone-button').addClass('mic-on');
     $('#microphone-modal h5').remove();
     whistle.init(null,null,'low');
 
 });
-
+document.addEventListener("whistleReady", function() {
+    $('#microphone-modal h3').text("Now blow..");
+}, false);
 document.addEventListener("whistle", function() { 
     if (whistle.intensity > 100) {
       console.log("Whistle intensity is above 100");
